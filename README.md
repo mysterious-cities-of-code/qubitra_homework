@@ -2,7 +2,7 @@
 
 This repo contains:
 
-JSON Specs for the protocal between a client and server as partially detailed in the homework task. 
+JSON Specs for the protocol between a client and server as partially detailed in the homework task. 
 
 The homework has a lot missing detail, areas that require clarification and parts that could be improved with
 some design changes.
