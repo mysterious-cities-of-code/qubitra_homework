@@ -2,10 +2,9 @@
 
 This repo contains:
 
-A folder with JSON Specs for the protocal between a client and server as partially detailed 
-in the homework task. 
+JSON Specs for the protocal between a client and server as partially detailed in the homework task. 
 
-The homework has a lot missing detail, areas that require clarification and parts that could be improved
+The homework has a lot missing detail, areas that require clarification and parts that could be improved with
 some design changes.
 
 The decision was made to start from the foundation of the client server layer specs, and already has several
@@ -22,7 +21,7 @@ we would probably use anything from Arrays through to B-Trees / B+ Trees through
 depending on how the data may present (regular vs interval) and if we wanted to optimise for reads, range queries or
 higher volume inserts. But still, I would start with Redis.
 
-Admin and related UI - this could be as simple as some HTML, CSS, JS, a small React generated front-end, or if a framework is used (e.g. Django for Python), then turnkey somethign from there.
+Admin and related UI - this could be as simple as some HTML, CSS, JS, a small React generated front-end, or if a framework is used (e.g. Django for Python), then turnkey something from there.
 
 Communication Considerations:
 
