@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Server:Response:Meter:Query Usage Data:Aggregated by Meter ID",
+  "description": "Represents an meter data payload in for a given client request for meter data",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "meter_id": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "to": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aggregated_price": {
+            "type": "string",
+            "$comment": "Either agree a string convention, such as ISO CCY code and value, or use int types for cent/pennies and a CCY field to be added; TBC"
+          }
+        },
+        "required": [
+          "meter_id",
+          "from",
+          "to",
+          "aggregated_price"
+        ]
+      }
+    }
+  },
+  "required": [
+    "timestamp",
+    "data"
+  ]
+}

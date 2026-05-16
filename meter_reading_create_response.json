@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Server:Response:Meter:Add Usage Data",
+  "description": "Represents an ack/nack response to a client request to add a tick of meter usage data",
+  "type": "object",
+  "properties": {
+    "server_ident": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "client_event_id": {
+          "type": "string"
+        },
+        "ack_nack": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "client_event_id",
+        "ack_nack"
+      ]
+    }
+  },
+  "required": [
+    "server_ident",
+    "timestamp",
+    "version",
+    "payload"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Client:Request:Meter:Add Usage Data",
+  "description": "Represents a single tick of meter usage data",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid",
+      "$comment": "We have assumed a UUID scheme for now; TBC"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "meter_id": {
+          "type": "string"
+        },
+        "reading_kwh": {
+          "type": "string"
+        },
+        "tariff_id": {
+          "type": "string"
+        },
+        "period_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "period_end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "meter_id",
+        "reading_kwh",
+        "tariff_id",
+        "period_start",
+        "period_end"
+      ]
+    }
+  },
+  "required": [
+    "event_id",
+    "timestamp",
+    "version",
+    "payload"
+  ]
+}
